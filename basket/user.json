@@ -1,0 +1,33 @@
+{
+    "target": {
+      "name": "user",
+      "ip": "http://127.0.0.1",
+      "port": ":8081"
+    },
+    "endpoints": [
+      {
+        "method": "POST",
+        "pattern": "/v1/api/auth/id-check"
+      },
+      {
+        "method": "POST",
+        "pattern": "/v1/api/auth/signup"
+      },
+      {
+        "method": "POST",
+        "pattern": "v1/api/auth/validate"
+      },
+      {
+        "method": "POST",
+        "pattern": "/v1/api/auth/jwt/refresh"
+      },
+      {
+        "method": "POST",
+        "pattern": "/v1/api/auth/login"
+      },
+      {
+        "method": "POST",
+        "pattern": "/v1/api/auth/google"
+      }
+    ]
+  }

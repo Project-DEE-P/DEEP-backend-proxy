@@ -1,0 +1,49 @@
+{
+    "target": {
+        "name": "card",
+        "ip":   "http://127.0.0.1",
+        "port": ":8082"
+    },
+    "endpoints": [
+        {
+            "method": "POST",
+            "pattern": "/v1/api/card" 
+        },
+        {
+            "method": "POST",
+            "pattern": "/v1/api/card/:id/remember" 
+        },
+        {
+            "method": "GET",
+            "pattern": "/v1/api/card/remember" 
+        },
+        {
+            "method": "GET",
+            "pattern": "/v1/api/card/:id"
+        },
+        {
+            "method": "GET",
+            "pattern": "/v1/api/card"
+        },
+        {
+            "method": "PATCH",
+            "pattern": "/v1/api/card/:id"
+        },
+        {
+            "method": "DELETE",
+            "pattern": "/v1/api/card/remember/:id" 
+        },
+        {
+            "method": "DELETE",
+            "pattern": "/v1/api/card/:id"
+        },
+        {
+            "method": "GET",
+            "pattern": "/hi"
+        },
+        {
+            "method": "GET",
+            "pattern": "/hello"
+        }
+    ]
+}
