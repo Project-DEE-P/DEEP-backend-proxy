@@ -61,34 +61,15 @@ func enableCors(w *http.ResponseWriter) {
 	(*w).Header().Set("Access-Control-Allow-Origin", "*")
 
 	// 모든 HTTP 메서드를 허용
-	(*w).Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS")
+	(*w).Header().Set("Access-Control-Allow-Methods", "*")
 
 	// 모든 헤더를 허용
-	(*w).Header().Set("Access-Control-Allow-Headers", "Accept, Accept-Language, Content-Language, Content-Type, Origin, Authorization, ACCESS-KEY")
+	(*w).Header().Set("Access-Control-Allow-Headers", "*")
 
 	// 자격 증명을 사용할 수 있도록 허용
 	(*w).Header().Set("Access-Control-Allow-Credentials", "true")
 
 	// preflight 요청 결과를 10분 동안 캐시
 	(*w).Header().Set("Access-Control-Max-Age", "600")
-
-}
-
-func enableCorsResponse(r *http.Response) {
-
-	// 모든 도메인을 허용
-	r.Header.Set("Access-Control-Allow-Origin", "*")
-
-	// 모든 HTTP 메서드를 허용
-	r.Header.Set("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS")
-
-	// 모든 헤더를 허용
-	r.Header.Set("Access-Control-Allow-Headers", "Accept, Accept-Language, Content-Language, Content-Type, Origin, Authorization")
-
-	// 자격 증명을 사용할 수 있도록 허용
-	r.Header.Set("Access-Control-Allow-Credentials", "true")
-
-	// preflight 요청 결과를 10분 동안 캐시
-	r.Header.Set("Access-Control-Max-Age", "600")
 
 }

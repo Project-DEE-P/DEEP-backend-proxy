@@ -60,6 +60,13 @@ func (r *router) HandleFunc(method, pattern string, b basket) {
 // 만약 찾지 못했다면 ~ 합니다.
 func (r *router) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 
+	// ACCESS-KEY
+	if req.Method == "ACCESS-KEY" {
+		corsHandler(w, req)
+		return
+	}
+
+	// preflight
 	if req.Method == http.MethodOptions {
 		corsHandler(w, req)
 		return
